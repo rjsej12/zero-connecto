@@ -1,5 +1,15 @@
 @use "variables" as *;
 
+// CSS 변수 (Sass 변수를 사용하기 위해서는 보간법이 필요!!)
+
+:root {
+  --forground: #{$black};
+  --background: #{$white};
+  --primary: #{$pink-500};
+  --secondary: #{$gray-700};
+  --border: #{$pink-200};
+}
+
 .dark {
   --forground: #{$pink-50};
   --background: #{$pink-900};

@@ -1,0 +1,13 @@
+%error-base {
+  cursor: progress;
+  color: red;
+  background: darkred;
+}
+
+.error {
+  @extend %error-base;
+  &--seriously {
+    @extend %error-base;
+    font-weight: bold;
+  }
+}

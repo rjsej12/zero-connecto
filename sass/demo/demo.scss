@@ -1,13 +1,42 @@
+/* Extend + Placeholder Selector */
+
 %error-base {
-  cursor: progress;
-  color: red;
+  margin: -0.4em;
+  padding: 0.4em 0.6em;
   background: darkred;
+  color: red;
 }
 
 .error {
   @extend %error-base;
   &--seriously {
-    @extend %error-base;
     font-weight: bold;
+    @extend %error-base;
+  }
+  &--big {
+    @extend %error-base;
+    font-size: 22px;
   }
 }
+
+/* Mixin */
+// 정의, 확장, 호출, 키워드 인자
+@mixin flexlayout($type: flex, $x: flex-start, $y: center) {
+  display: $type;
+  justify-content: $x;
+  align-items: $y;
+}
+
+.demo {
+  @include flexlayout;
+
+  &__content {
+    @include flexlayout(inline-flex);
+  }
+
+  &__row {
+    @include flexlayout($x: center);
+  }
+}
+
+//  <div role="alert" class="error">오류 메시지</div>

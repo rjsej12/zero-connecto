@@ -3,19 +3,19 @@
   flex-flow: column;
   margin-top: 40px;
   font-size: 0.875rem;
-  gap: var(--gap);
+  gap: $gap;
 }
 
 .features strong {
   display: block;
   margin-bottom: 2px;
   font-size: 1rem;
-  color: var(--primary);
+  color: $primary;
 }
 
 .features a {
   text-decoration: none;
-  color: var(--primary);
+  color: $primary;
 }
 
 @media (min-width: 48em /* 768px */) {
@@ -26,7 +26,7 @@
   .features li {
     --columns: 2;
     /* flex-basis: calc(100% / 2 - (var(--gap) / (2 / (2 - 1))); */
-    flex-basis: calc(100% / var(--columns) - (var(--gap) / (var(--columns) / (var(--columns) - 1))));
+    flex-basis: calc(100% / var(--columns) - ($gap / (var(--columns) / (var(--columns) - 1))));
   }
 }
 

@@ -1,23 +1,6 @@
-@import "config/variables";
-@import "config/dark";
+// partner.css -> sass로 불러오면서 정확한 위치에 코드가 존재해야할때만 @import
 
-@import "base/reset";
-@import "base/base";
-
-@import "layout/header";
-@import "layout/footer";
-
-@import "components/container";
-@import "components/logo";
-@import "components/headline";
-@import "components/content";
-@import "components/features";
-@import "components/button";
-
-//CSS의 @import 규칙과 Sass의 차이점
-//- 꼭 파일의 첫 줄에 작성하지 않아도 됨
-//- Sass의 지원 포맷 2가지 호환 가능
-
-// 관심사의 분리
-// 스타일 분석 -> 관심사 별 파일로 모듈 분리
-// 모듈이 컴파일 된 CSS 코드로 출력되도록 설정 하시오.
+@use "config";
+@use "base";
+@use "components";
+@use "layout";

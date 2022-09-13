@@ -1,21 +1,23 @@
+@use "../config" as *;
+
 .features {
   display: flex;
   flex-flow: column;
   margin-top: 40px;
   font-size: 0.875rem;
   gap: $gap;
-}
 
-.features strong {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 1rem;
-  color: $primary;
-}
+  strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    color: $primary;
+  }
 
-.features a {
-  text-decoration: none;
-  color: $primary;
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
 }
 
 @media (min-width: 48em /* 768px */) {

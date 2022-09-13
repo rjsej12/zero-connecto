@@ -1,20 +1,43 @@
+//BEM 방법론
+// .Block {
+//   content: "Block";
+
+//   &--Modifier {
+//     content: "Block--Modifier";
+//   }
+
+//   &__Element1 {
+//     content: "Block__Element1";
+//   }
+//   &__Element2 {
+//     content: "Block__Element2";
+//     &--Modifier {
+//       content: "Block__Element2--Modifier";
+//     }
+//   }
+//   &__Element3 {
+//     content: "Block__Element3";
+//   }
+// }
+@use "../config" as *;
+
 .toggleDarkMode {
   cursor: pointer;
   border: 0;
   padding: 8px;
   background: none;
   color: $primary;
-}
 
-.toggleDarkMode--fixed {
-  position: fixed;
-  top: 24px;
-  right: 24px;
-}
+  &--fixed {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+  }
 
-.toggleDarkMode svg {
-  pointer-events: none;
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  svg {
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
 }

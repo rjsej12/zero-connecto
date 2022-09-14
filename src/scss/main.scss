@@ -1,2 +1,9 @@
+@use "abstracts" as * with (
+  $base-rem-size: 16
+);
 @use "base";
-@use "abstracts" as *;
+@use "sass:meta";
+@use "sass:string";
+
+@debug string.index("hi sass", "hi");
+@debug string.index("hi sass", "scss");

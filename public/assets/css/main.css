@@ -1,18 +1,12 @@
-body *, body ::before, body::before, body ::after, body::after {
+body *::before, body *::after, body, body::before, body::after {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* - */
-/*                                   COLORS                                   */
-/* - */
-/* - */
-/*                                 TYPOGRAPHY                                 */
-/* - */
 :root {
-  font-size: 62.5%;
+  font-size: get-base-rem-size-percentage(10);
 }
 
 body {

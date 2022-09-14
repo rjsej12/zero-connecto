@@ -6,7 +6,7 @@ body *::before, body *::after, body, body::before, body::after {
 }
 
 :root {
-  font-size: get-base-rem-size-percentage(10);
+  font-size: 62.5%;
 }
 
 body {

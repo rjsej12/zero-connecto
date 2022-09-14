@@ -2,8 +2,18 @@
   $base-rem-size: 16
 );
 @use "base";
-@use "sass:meta";
-@use "sass:string";
+@use "sass:map";
 
-@debug string.index("hi sass", "hi");
-@debug string.index("hi sass", "scss");
+@mixin makeColorUtils($name, $prop: color) {
+  $color-values: map.get($colors, $name);
+  @each $key, $value in $color-values {
+    .#{"" + $name}-#{$key} {
+      #{$prop}: $value;
+    }
+  }
+}
+
+@include makeColorUtils(red);
+@include makeColorUtils(green, background);
+@include makeColorUtils(blue);
+@include makeColorUtils(gray);

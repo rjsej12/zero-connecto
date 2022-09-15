@@ -5,6 +5,10 @@ body *::before, body *::after, body, body::before, body::after {
   box-sizing: border-box;
 }
 
+.button {
+  border: 0;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -322,16 +326,73 @@ body {
 .header {
   margin-left: 28px;
   margin-right: 28px;
-  margin-top: 32px;
-  margin-bottom: 32px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
+.main .container {
+  width: min-content;
+  margin: 100px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.carousel--button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25px);
+  cursor: pointer;
+  transition: transform 200ms;
+}
+.carousel--button:focus {
+  outline: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+  left: 0;
+  transform: translateX(-25px);
+}
+.prev:hover {
+  transform: scale(1.2) translateX(-20px);
+}
+
+.next {
+  right: 0;
+  transform: translateX(25px) rotate(180deg);
+}
+.next:hover {
+  transform: scale(1.2) translateX(20px) rotate(180deg);
+}
+
 .logo {
   order: 1;
+}
+.logo a {
+  display: block;
+  padding: 10px 10px 0 10px;
+}
+.logo a:focus {
+  outline: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .menu {
@@ -344,22 +405,32 @@ body {
   justify-content: center;
 }
 .menu--list--item {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+.menu--list--item:focus {
+  outline: 5px solid rgba(255, 255, 255, 0.5);
+}
+.menu--list--item:hover {
+  transform: scale(1.2);
 }
 
-.main .container {
-  width: min-content;
-  margin: 100px auto;
-  display: flex;
-  flex-flow: row nowrap;
+.is-select {
+  position: relative;
 }
 
 .is-select::after {
   content: "";
-  width: 100%;
+  display: block;
   height: 1px;
-  background: #ffffff;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  background: currentColor;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

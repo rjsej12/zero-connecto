@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.menu {
+  flex-grow: 1;
+  &--list {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    &--item {
+      @include mx(10);
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 200ms;
+      &:focus {
+        outline: 5px solid rgba(255, 255, 255, 0.5);
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.is-select {
+  position: relative;
+}
+
+.is-select::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  background: currentColor;
+  margin-top: 5px;
+}

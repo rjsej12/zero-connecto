@@ -21,20 +21,24 @@
       </h1>
       <nav class="menu">
         <ul role="list" class="menu--list">
-          <li class="menu--list--item">SHOP</li>
-          <li class="menu--list--item is__select">COLLECTION</li>
-          <li class="menu--list--item">ABOUT</li>
+          <li class="menu--list--item" tabindex="0">SHOP</li>
+          <li class="menu--list--item is-select" tabindex="0">COLLECTION</li>
+          <li class="menu--list--item" tabindex="0">ABOUT</li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <div class="container">
-        <h2 class="a11y-hidden"></h2>
+        <h2 class="a11y-hidden">캐러셀</h2>
+        <div class="carousel--buttons">
+          <button type="button" class="button carousel--button prev"><img src="./assets/images/svgs/arrow.svg" alt="이전 이미지로 이동" /></button>
+          <button type="button" class="button carousel--button next"><img src="./assets/images/svgs/arrow.svg" alt="다음 이미지로 이동" /></button>
+        </div>
         <div class="carousel1">
-          <img src="./assets/images/photos/image-01.jpg" alt="" />
+          <img src="./assets/images/photos/image-01.jpg" alt="캐러셀 이미지 1" />
         </div>
         <div class="carousel2">
-          <img src="./assets/images/photos/image-02.jpg" alt="" />
+          <img src="./assets/images/photos/image-02.jpg" alt="캐러셀 이미지 2" />
         </div>
       </div>
     </main>

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../../src/scss/components/Logo.scss","../../../../src/scss/abstracts/variables/_colors.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EACA,YCLM","file":"Logo.css"}
+{"version":3,"sourceRoot":"","sources":["../../../../src/scss/components/Logo.scss"],"names":[],"mappings":"AAEA;EACE;;AACA;EACE;EACA;;AACA;EACE","file":"Logo.css"}

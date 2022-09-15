@@ -3,6 +3,7 @@
   margin: 100px auto;
   display: flex;
   flex-flow: row nowrap;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

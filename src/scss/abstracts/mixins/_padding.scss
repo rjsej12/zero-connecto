@@ -1,0 +1,29 @@
+@use "../functions" as *;
+
+@mixin p($num) {
+  @if has-unit($num) {
+    padding: $num;
+  } @else {
+    padding: spacing($num);
+  }
+}
+
+@mixin px($num) {
+  @if has-unit($num) {
+    padding-left: $num;
+    padding-right: $num;
+  } @else {
+    padding-left: spacing($num);
+    padding-right: spacing($num);
+  }
+}
+
+@mixin py($num) {
+  @if has-unit($num) {
+    padding-top: $num;
+    padding-bottom: $num;
+  } @else {
+    padding-top: spacing($num);
+    padding-bottom: spacing($num);
+  }
+}

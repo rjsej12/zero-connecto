@@ -1,0 +1,21 @@
+@use "sass:meta";
+@use "../variables/spacing" as *;
+@use "units" as *;
+@use "sass:math";
+
+// @function spacing($ratio, $base: $base-spacing) {
+//   $ratio: if(has-unit($ratio), remove-unit($ratio), $ratio);
+//   $base: if(has-unit($base), remove-unit($base), $base);
+//   @return add-unit($ratio * $base, $unit);
+// }
+
+@function spacing($num1, $num2: 4) {
+  @if has-unit($num1) {
+    $tempunit: get-unit($num1);
+    $tempnum1: remove-unit($num1);
+    $tempnum2: remove-unit($num2);
+    @return $tempnum1 * $tempnum2 + #{$tempunit};
+  } @else {
+    @return $num1 * $num2 + px;
+  }
+}

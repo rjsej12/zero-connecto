@@ -1,2 +1,7 @@
-@use 'base';
-@use 'utilities';
+@use "base";
+@use "utilities";
+@use "abstracts" as *;
+
+.content {
+  @include sticky(t 20px);
+}

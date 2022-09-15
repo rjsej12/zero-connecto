@@ -1,0 +1,67 @@
+@use "sass:list";
+@use "sass:string";
+@use "../functions" as *;
+
+@function get-prop-name($key) {
+  $result: null;
+  @if $key == t {
+    $result: top;
+  }
+  @if $key == r {
+    $result: right;
+  }
+  @if $key == b {
+    $result: bottom;
+  }
+  @if $key == l {
+    $result: left;
+  }
+  @if $key == z {
+    $result: z-index;
+  }
+  @return $result;
+}
+
+@mixin create-style-rule($props, $prop-list) {
+  @each $key in $prop-list {
+    $key-index: list.index($props, $key);
+    @if is-number($key-index) {
+      $prop: list.nth($props, $key-index);
+      @if string.length($prop) == 1 {
+        $prop: get-prop-name($prop);
+      }
+      $value: list.nth($props, $key-index + 1);
+      #{$prop}: $value;
+    }
+  }
+}
+
+@mixin position($type, $props: ()) {
+  position: $type;
+
+  @include create-style-rule($props, z-index z);
+  @include create-style-rule($props, top t);
+  @include create-style-rule($props, right r);
+  @include create-style-rule($props, bottom b);
+  @include create-style-rule($props, left l);
+}
+
+@mixin relative($props: null) {
+  @include position(relative, $props);
+}
+
+@mixin absolute($props: null) {
+  @include position(absolute, $props);
+}
+
+@mixin fixed($props: null) {
+  @include position(fixed, $props);
+}
+
+@mixin sticky($props: null) {
+  @include position(sticky, $props);
+}
+
+@mixin static() {
+  @include position(static);
+}

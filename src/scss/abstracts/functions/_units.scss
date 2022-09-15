@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 @function get-base-rem-size-percentage($base-px-size) {
   @return math.div(remove-unit($base-px-size), 16) * 100%;
@@ -16,8 +16,12 @@
   @return math.unit($value);
 }
 
+// @function add-unit($value, $unit: "px") {
+//   @return if(has-unit($value), if($value != 0, $value + #{$unit}, $value), $value + #{$unit});
+// }
+
 @function has-unit($value) {
-  @return get-unit($value) != '';
+  @return get-unit($value) != "";
 }
 
 @function remove-unit($unit) {

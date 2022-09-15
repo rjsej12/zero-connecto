@@ -1,0 +1,29 @@
+@use "../functions" as *;
+
+@mixin m($num) {
+  @if has-unit($num) {
+    margin: $num;
+  } @else {
+    margin: spacing($num);
+  }
+}
+
+@mixin mx($num) {
+  @if has-unit($num) {
+    margin-left: $num;
+    margin-right: $num;
+  } @else {
+    margin-left: spacing($num);
+    margin-right: spacing($num);
+  }
+}
+
+@mixin my($num) {
+  @if has-unit($num) {
+    margin-top: $num;
+    margin-bottom: $num;
+  } @else {
+    margin-top: spacing($num);
+    margin-bottom: spacing($num);
+  }
+}

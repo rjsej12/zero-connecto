@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.header {
+  @include mx(7);
+  @include my(8);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  order: 1;
+}
+
+.menu {
+  flex-grow: 1;
+  &--list {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    &--item {
+      @include mx(20);
+    }
+  }
+}

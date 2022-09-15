@@ -1,0 +1,14 @@
+@use "sass:meta";
+@use "units" as *;
+@use "sass:math";
+
+@function spacing($num1, $num2: 4) {
+  @if has-unit($num1) {
+    $tempunit: get-unit($num1);
+    $tempnum1: remove-unit($num1);
+    $tempnum2: remove-unit($num2);
+    @return $tempnum1 * $tempnum2 + #{$tempunit};
+  } @else {
+    @return $num1 * $num2 + px;
+  }
+}

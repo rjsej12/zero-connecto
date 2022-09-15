@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+.main .container {
+  width: min-content;
+  margin: 100px auto;
+  display: flex;
+  flex-flow: row nowrap;
+}

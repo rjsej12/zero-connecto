@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+.is-select::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: $white;
+}

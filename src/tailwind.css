@@ -18,3 +18,23 @@
     clip: rect(0, 0, 0, 0);
   }
 }
+
+@layer components {
+  .Card {
+    /* 모바일 퍼스트 */
+    @apply bg-rong-violet-400 w-full rounded mx-4 flex flex-col items-start gap-4 p-8 text-white shadow-rong-violet-600;
+    /* md */
+    @apply md:bg-violet-700 md:inline-flex md:w-auto;
+    /* lg */
+    @apply lg:bg-rong-violet-900;
+  }
+  .Card_link {
+    @apply block mt-2 text-sm text-tailwind;
+  }
+  .Button {
+    @apply px-5 py-2 bg-rong-violet-500 rounded text-white transition duration-200 hover:bg-violet-400 hover:ring-2 hover:ring-gray-500 active:bg-violet-300 active:ring-2 active:ring-black;
+  }
+  .Circle {
+    @apply w-8 h-8 rounded-full;
+  }
+}

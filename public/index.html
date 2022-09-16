@@ -13,16 +13,34 @@
     <link rel="stylesheet" href="//gif.helltabus.com/libs/spoqa-han-sans-neo/css/SpoqaHanSansNeo-kr.css" />
 
     <link rel="stylesheet" href="assets/styles/main.css" />
+    <script type="module" src="assets/scripts/main.js"></script>
   </head>
 
-  <body class="h-screen bg-rong-violet-600 text-white flex justify-center items-center">
-    <figure class="flex items-center justify-center w-100 p-6 bg-white rounded-lg drop-shadow-lg">
-      <img class="h-8" src="./assets/images/tailwindcss-logotype-white.svg" alt="" />
-      <figcaption class="flex flex-col justify-center">
-        <h3 class="text-2xl text-cyan-500 font-semibold" lang="en">Tailwind <abbr class="no-underline cursor-help" title="Cascading Style Sheet">CSS</abbr></h3>
-        <p class="mt-2 text-sm text-gray-700">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
-        <a class="block mt-2 text-sm text-cyan-600" href="https://tailwindcss.com/docs/utility-first" rel="noopener noreferrer" target="_blank"> 유틸리티 퍼스트 펀더멘탈 </a>
+  <body class="relative h-screen bg-tailwind dark:bg-black text-white flex flex-col gap-4 justify-center items-center">
+    <figure class="Card">
+      <img class="inline-block h-6" src="assets/images/tailwindcss-logotype-white.svg" alt="" />
+      <figcaption>
+        <h3 class="a11y-hidden" lang="en">Tailwind <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+        <p class="text-sm">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
+        <a class="Card_link hover:text-white transition duration-300 focus:outline-none focus:ring-2" href="https://tailwindcss.com/docs/utility-first" rel="noopener noreferrer" target="_blank"> 유틸리티 퍼스트 펀더멘탈 </a>
       </figcaption>
     </figure>
+
+    <div class="flex gap-4 items-center">
+      <div class="Circle bg-yellow-700 dark:bg-yellow-200"></div>
+      <div class="Circle bg-purple-700 dark:bg-purple-200"></div>
+      <div class="Circle bg-pink-700 dark:bg-pink-200"></div>
+    </div>
+
+    <button class="Sun fixed top-3 right-3 hidden dark:visible">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+      </svg>
+    </button>
+    <button class="Moon fixed top-3 right-3 dark:hidden" aria-label="다크 모드 전환" title="다크 모드 전환">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
   </body>
 </html>

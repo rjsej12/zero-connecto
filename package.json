@@ -1,8 +1,13 @@
 {
   "scripts": {
-    "serve": "live-server public --host=localhost --port=8080 --no-browser"
+    "serve": "live-server public --host=localhost --port=8080 --no-browser",
+    "compile": "tailwindcss -i src/tailwind.css -o public/assets/styles/main.css",
+    "watch": "npm run compile -- --watch",
+    "dev": "run-p watch serve"
   },
   "devDependencies": {
-    "live-server": "1.2.2"
+    "live-server": "1.2.2",
+    "npm-run-all": "4.1.5",
+    "tailwindcss": "3.1.8"
   }
 }

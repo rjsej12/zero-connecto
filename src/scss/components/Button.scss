@@ -19,7 +19,7 @@
   left: 0;
   transform: translateX(-25px);
   &:hover {
-    transform: scale(1.2) translateX(-20px);
+    transform: scale(1.2) translateX(-25px);
   }
 }
 
@@ -27,6 +27,6 @@
   right: 0;
   transform: translateX(25px) rotate(180deg);
   &:hover {
-    transform: scale(1.2) translateX(20px) rotate(180deg);
+    transform: scale(1.2) translateX(25px) rotate(180deg);
   }
 }
